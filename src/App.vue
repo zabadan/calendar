@@ -1,17 +1,53 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="d-flex flex-center">
+    <calendar-schedule :checkedDay="checkedDay" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    CalendarSchedule: () => import('@/components/CalendarSchedule')
+  },
+  data () {
+    return {
+      checkedDay: {
+        "mo": [
+          {
+            "bt": 240,
+            "et": 779
+          }
+        ],
+        "tu": [
+        ],
+        "we": [
+        ],
+        "th": [
+          {
+          "bt": 240,
+                "et": 779
+          },
+          {
+          "bt": 1140,
+                "et": 1319
+          }
+        ],
+        "fr": [
+          {
+          "bt": 660,
+                "et": 1019
+          }
+        ],
+        "sa": [
+              {
+                "bt": 0,
+                "et": 1439
+              }
+            ],
+        "su": []
+        }
+    }
   }
 }
 </script>
