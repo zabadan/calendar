@@ -279,15 +279,17 @@
         width: auto
         justify-content: end
       &_time
-        width: $with-primitive * 3
+        width: $with-primitive * 3 + 6
+        padding-left: 5px
         text-align: left
         position: relative
         display: flex
         align-items: center
+        box-sizing: border-box
         &:after
           content: ''
           position: absolute
-          left: -1px
+          left: 1px
           bottom: 0
           width: 2px
           height: 10px
@@ -304,7 +306,6 @@
       border: 1px solid lightgrey
     &__check-day
       width: $with-primitive * 2
-      height: $height-prmitive
       background-color: grey
       border: 1px solid lightgrey
     &__actions
